@@ -44,24 +44,30 @@ class Game extends Component {
         let rand = Math.floor(Math.random() * this.state.deck.length);
         let cardObj = this.state.deck.splice(rand, 1);
         tempArr.push(cardObj[0]);
+        this.props.changeCardsInPlay(tempArr); //Should be a way that this gets updated with below statement?
         this.setState({ cardsInPlay: tempArr })
     }
 
     onCardClick = (cardID) => {
-
+        console.log(cardID)
+        //this.state.cardIDsClicked.contains(cardID) ? 1 : 0
     }
 
     render() {
         return (
             <CardContainer>
-                {this.state.cardsInPlay.map(cardObj => (
+                <div className="row">
+                    {this.state.cardsInPlay.map(cardObj => (
 
-                    <Card
-                        //onClick={() => this.onCardClick(cardObj.id)}
-                        key={cardObj.id}
-                        image={cardObj.imgName}
-                    />
-                ))}
+                        <Card
+                            onClick={() => this.onCardClick(cardObj.card_id)}
+                            key={cardObj.card_id}
+                            cardid={cardObj.card_id}
+                            image={cardObj.imgName}
+                        />
+                    ))}
+                </div>
+
             </CardContainer>
         );
     }

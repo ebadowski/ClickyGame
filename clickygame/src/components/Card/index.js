@@ -3,24 +3,24 @@ import "./style.css";
 
 export function CardContainer({ children }) {
     return (
-        <div className="card-container">{children}</div>
+        <div className="card-container center-block">{children}</div>
     );
 }
 
 export function Card(props) {
-    //return <li className="list-group-item">{children}</li>;
+    
     return (
-        // <div>
-        //     <img className="playing-card" {...props} src={props.image} alt=""></img>
-        // </div>
-        <div
-        className="card"
-        style={{
-          backgroundImage: props.image ? `url(`+require('../images/'+props.image)+`)` : "none",
-          height: "300px",
-          width: "300px"
-        }}
-      ></div>
+        
+            <div className="col 3">
+                <div className="card">
+                    <a href="#" {...props}>
+                        <div className="card-image">
+                            <img src={require('../images/'+props.image)} alt="" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+
     );
 }
 
