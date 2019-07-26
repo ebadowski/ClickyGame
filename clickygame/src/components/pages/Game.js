@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardContainer } from "../Card";
 import Deck from "../../utils/Deck.json";
+import M from "materialize-css";
 
 class Game extends Component {
     state = {
@@ -10,11 +11,21 @@ class Game extends Component {
         numRight: 0,
         highScore: 0
     };
-
+    componentWillReceiveProps(nextProps) {
+        this.setState(
+            {
+                deck: nextProps.Deck,
+                cardsInPlay: nextProps.cardsInPlay,
+                cardIDsClicked: nextProps.cardIDsClicked,
+                numRight: nextProps.numRight,
+                highScore: nextProps.highScore
+            }
+        );
+    }
 
     componentDidMount() {
         this.populateCards()
-
+        M.AutoInit();
     }
 
 
