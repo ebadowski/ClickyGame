@@ -2,6 +2,7 @@
   "name": "clickygame",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ebadowski.github.io/ClickyGame/",
   "dependencies": {
     "axios": "^0.19.0",
     "materialize-css": "^1.0.0-rc.2",
