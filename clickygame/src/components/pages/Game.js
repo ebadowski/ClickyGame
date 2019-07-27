@@ -90,7 +90,7 @@ class Game extends Component {
             });
             //this.props.changeGlobalState('deck', deck);
             this.props.changeGlobalState("RESET ALL", "all");
-       
+            this.shuffleCards('cardsInPlay', this.state.cardsInPlay)
     }
     shuffleCards(target, arr) {
         arr.sort(() => Math.random() - 0.5);
