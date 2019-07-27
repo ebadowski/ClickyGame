@@ -23,13 +23,16 @@ class Container extends Component {
     changeCardsInPlay = (arr) => {
         this.state.cardsInPlay = arr;
     }
+    changeGlobalState = (key, arr) => {
+        this.state[key] = arr;
+    }
 
 
     render() {
         return (
             <div>
                 <Navbar {...this.state}/>
-        <Game {...this.state} changeCardsInPlay={this.changeCardsInPlay}/>
+        <Game {...this.state} changeGlobalState={this.changeGlobalState}/>
             </div>
         );
     }
