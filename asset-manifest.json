@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ClickyGame/static/css/main.d27ea4a5.chunk.css",
-    "main.js": "/ClickyGame/static/js/main.202b2050.chunk.js",
-    "main.js.map": "/ClickyGame/static/js/main.202b2050.chunk.js.map",
+    "main.css": "/ClickyGame/static/css/main.86f96ce1.chunk.css",
+    "main.js": "/ClickyGame/static/js/main.dacd78ce.chunk.js",
+    "main.js.map": "/ClickyGame/static/js/main.dacd78ce.chunk.js.map",
     "runtime~main.js": "/ClickyGame/static/js/runtime~main.1eb9bb0a.js",
     "runtime~main.js.map": "/ClickyGame/static/js/runtime~main.1eb9bb0a.js.map",
     "static/css/2.ae9e8b99.chunk.css": "/ClickyGame/static/css/2.ae9e8b99.chunk.css",
-    "static/js/2.73ed7e8a.chunk.js": "/ClickyGame/static/js/2.73ed7e8a.chunk.js",
-    "static/js/2.73ed7e8a.chunk.js.map": "/ClickyGame/static/js/2.73ed7e8a.chunk.js.map",
+    "static/js/2.8d759dae.chunk.js": "/ClickyGame/static/js/2.8d759dae.chunk.js",
+    "static/js/2.8d759dae.chunk.js.map": "/ClickyGame/static/js/2.8d759dae.chunk.js.map",
     "index.html": "/ClickyGame/index.html",
-    "precache-manifest.8e9469bf8546e7953a110b347f8b57b6.js": "/ClickyGame/precache-manifest.8e9469bf8546e7953a110b347f8b57b6.js",
+    "precache-manifest.32642c2ac925d6681294abd694e32bac.js": "/ClickyGame/precache-manifest.32642c2ac925d6681294abd694e32bac.js",
     "service-worker.js": "/ClickyGame/service-worker.js",
     "static/css/2.ae9e8b99.chunk.css.map": "/ClickyGame/static/css/2.ae9e8b99.chunk.css.map",
-    "static/css/main.d27ea4a5.chunk.css.map": "/ClickyGame/static/css/main.d27ea4a5.chunk.css.map",
+    "static/css/main.86f96ce1.chunk.css.map": "/ClickyGame/static/css/main.86f96ce1.chunk.css.map",
     "static/media/beth.png": "/ClickyGame/static/media/beth.4d5e65a0.png",
     "static/media/bp.png": "/ClickyGame/static/media/bp.612ba8d4.png",
     "static/media/evilmorty.png": "/ClickyGame/static/media/evilmorty.0657e1f4.png",
@@ -23,6 +23,7 @@
     "static/media/meeseeks.png": "/ClickyGame/static/media/meeseeks.9667b7ee.png",
     "static/media/morty.png": "/ClickyGame/static/media/morty.244deeda.png",
     "static/media/mr.png": "/ClickyGame/static/media/mr.d61b2d5b.png",
+    "static/media/portal.png": "/ClickyGame/static/media/portal.842f63c3.png",
     "static/media/rick.png": "/ClickyGame/static/media/rick.06b65841.png",
     "static/media/summer.png": "/ClickyGame/static/media/summer.afdbb7bf.png"
   }
