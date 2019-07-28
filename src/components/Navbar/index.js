@@ -12,7 +12,7 @@ function Navbar(props) {
                     <li className="">ClickyGame</li>
                 </ul>
                 <ul className="brand-logo center">
-                    <li className="">Click an image to start!</li>
+                    <li className="">Click the portal to start!</li>
                 </ul>
                 <ul className="brand-logo right">
                     <li className="">Correct: {props.numRight} | High: {props.highScore}</li>

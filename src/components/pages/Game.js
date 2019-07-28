@@ -11,7 +11,7 @@ import range from 'lodash/range';
 
 // Diameter of the main button in pixels
 const MAIN_BUTTON_DIAM = 150;
-const CHILD_BUTTON_DIAM = 100;
+const CHILD_BUTTON_DIAM = 150;
 // The number of child buttons that fly out from the main button
 const NUM_CHILDREN = 9;
 // Hard code the position values of the mainButton 
@@ -322,7 +322,7 @@ class Game extends React.Component {
     render() {
         let { isOpen } = this.state;
         let mainButtonRotation =
-            isOpen ? { rotate: spring(0, { stiffness: 500, damping: 30 }) } : { rotate: spring(-135, { stiffness: 500, damping: 30 }) };
+            isOpen ? { rotate: spring(0, { stiffness: 500, damping: 30 }) } : { rotate: spring(-180, { stiffness: 500, damping: 30 }) };
         return (
             <CardContainer>
                 {this.renderChildButtons()}
@@ -332,7 +332,8 @@ class Game extends React.Component {
                             className="main-button center"
                             style={{ ...this.mainButtonStyles(), transform: `rotate(${rotate}deg)` }}
                             onClick={this.toggleMenu}>
-                            <i className="fa fa-close fa-3x" />
+                                <img alt= "" src={require('../images/portal.png')} className="menu-btn-img" />
+                            {/* <i className="fa fa-close fa-3x" /> */}
                         </div>
                     }
                 </Motion>
