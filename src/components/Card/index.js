@@ -12,10 +12,10 @@ export function Card(props) {
     return (
         
             <div className="col 3">
-                <div className="card">
+                <div className="card circle">
                     <a href="#" {...props}>
-                        <div className="card-image">
-                            <img src={require('../images/'+props.image)} alt="" />
+                        <div className="card-image circle">
+                            <img src={require('../images/'+props.image)} alt="" className="circle"/>
                         </div>
                     </a>
                 </div>

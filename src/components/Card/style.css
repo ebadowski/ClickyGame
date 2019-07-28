@@ -1,6 +1,7 @@
 .card{
     height: 200px;
     width: 200px;
+    /* background-color: transparent; */
 }
 .card-image{
     height: 200px;
@@ -9,4 +10,13 @@
 img{
     height: 100%;
     width: 100%;
+    /* border-radius: 50% !important;
+    background-color: transparent; */
+} 
+.circle{
+    
+    border-radius: 50% !important;
+}
+.card-container{
+    align-items: center;
 }
