@@ -12,7 +12,8 @@ class Container extends Component {
         cardsInPlay: [],
         cardIDsClicked: [],
         numRight: 0,
-        highScore: 0
+        highScore: 0,
+        navMsg:"Click the portal to start!"
     };
 
 
@@ -62,7 +63,7 @@ class Container extends Component {
     render() {
         return (
             <div>
-                <Navbar numRight={this.state.numRight} highScore={this.state.highScore} />
+                <Navbar numRight={this.state.numRight} highScore={this.state.highScore} navMsg={this.state.navMsg} />
                 <Game {...this.state} changeGlobalState={this.changeGlobalState} populateCards={this.populateCards}/>
 
             </div>

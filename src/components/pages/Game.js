@@ -59,7 +59,8 @@ class Game extends React.Component {
             numRight: 0,
             highScore: 0,
             width: 0, 
-            height: 0
+            height: 0,
+            navMsg:""
         };
 
         // Bind this to the functions
@@ -74,7 +75,8 @@ class Game extends React.Component {
                 cardsInPlay: nextProps.cardsInPlay,
                 cardIDsClicked: nextProps.cardIDsClicked,
                 numRight: nextProps.numRight,
-                highScore: nextProps.highScore
+                highScore: nextProps.highScore,
+                navMsg: nextProps.navMsg
             }
         );
     }
@@ -231,6 +233,8 @@ class Game extends React.Component {
         this.setState({
             isOpen: !isOpen
         });
+
+        !isOpen ? this.props.changeGlobalState('navMsg', "Click w/o repeating!") : this.props.changeGlobalState('navMsg', "Click the portal to start!")
     }
 
     closeMenu() {
