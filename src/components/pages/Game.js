@@ -14,12 +14,11 @@ const MAIN_BUTTON_DIAM = 150;
 const CHILD_BUTTON_DIAM = 100;
 // The number of child buttons that fly out from the main button
 const NUM_CHILDREN = 9;
-// Hard code the position values of the mainButton
+// Hard code the position values of the mainButton 
 const M_X = 100;
 const M_Y = 100;
 
-//should be between 0 and 0.5 (its maximum value is difference between scale in finalChildButtonStyles a
-// nd initialChildButtonStyles)
+//should be between 0 and 0.5 (its maximum value is difference between scale in finalChildButtonStyles and initialChildButtonStyles)
 const OFFSET = 0.05;
 
 const SPRING_CONFIG = { stiffness: 400, damping: 28 };
@@ -30,9 +29,6 @@ const FLY_OUT_RADIUS = 250,
     FAN_ANGLE = (NUM_CHILDREN - 1) * SEPARATION_ANGLE, //degrees
     BASE_ANGLE = ((180 - FAN_ANGLE) / 2); // degrees
 
-// Names of icons for each button retreived from fontAwesome, we'll add a little extra just in case 
-// the NUM_CHILDREN is changed to a bigger value
-let childButtonIcons = ['pencil', 'at', 'camera', 'bell', 'comment', 'bolt', 'ban', 'code'];
 
 
 // Utility functions
@@ -83,7 +79,6 @@ class Game extends React.Component {
         );
     }
     componentDidMount() {
-        //window.addEventListener('click', this.closeMenu);
         let childButtons = [];
 
         this.setState({ childButtons: childButtons.slice(0) });
@@ -92,7 +87,6 @@ class Game extends React.Component {
     }
 
     componentWillUnmount() {
-        //window.removeEventListener('click', this.closeMenu);
         window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
@@ -135,9 +129,7 @@ class Game extends React.Component {
         // pull from deck
         this.pullFromDeck()
         // shuffle cards in play
-        //this.closeMenu()
         this.shuffleCards('cardsInPlay', this.state.cardsInPlay)
-       // this.openMenu()
     }
     alreadyClicked = (cardID) => {
         //Check if highscore, change appropriately
@@ -147,20 +139,13 @@ class Game extends React.Component {
             this.props.changeGlobalState("highScore", tempScore);
         }
 
-        // let cardsInPlay = this.state.cardsInPlay;
-        // let deck = this.state.deck.concat(cardsInPlay);
-        // console.log(cardsInPlay)
+       
         this.setState({
-            // numRight: 0,
             cardIDsClicked: [],
-            //cardsInPlay: [],
-            //deck: deck
         });
-        //this.props.changeGlobalState('deck', deck);
         this.props.changeGlobalState("RESET ALL", "all");
         this.closeMenu()
         this.shuffleCards('cardsInPlay', this.state.cardsInPlay)
-        //this.animateCards()
     }
     shuffleCards(target, arr) {
         arr.sort(() => Math.random() - 0.5);
@@ -178,11 +163,6 @@ class Game extends React.Component {
         this.setState({ deck: deck })
         this.props.changeGlobalState('deck', deck);
     }
-
-
-
-
-
 
 
 
@@ -251,7 +231,6 @@ class Game extends React.Component {
         this.setState({
             isOpen: !isOpen
         });
-        //remove toggle classes
     }
 
     closeMenu() {
@@ -277,8 +256,7 @@ class Game extends React.Component {
         const scaleMin = this.initialChildButtonStyles().scale.val;
         const scaleMax = this.finalChildButtonStyles(0).scale.val;
 
-        //This function returns target styles for each child button in current animation frame
-        //according to actual styles in previous animation frame.
+        //This function returns target styles for each child button in current animation frame according to actual styles in previous animation frame.
         // CREDIT TO nashvail on github
               let calculateStylesForNextFrame = prevFrameStyles => {
             prevFrameStyles = isOpen ? prevFrameStyles : prevFrameStyles.reverse();
@@ -312,7 +290,6 @@ class Game extends React.Component {
                     <div>
                         {interpolatedStyles.map(({ height, left, rotate, scale, top, width }, index) => {
                             if (this.state.cardsInPlay[index]) {
-                                console.log(this.state.cardsInPlay)
                                 return <div
                                     className="child-button circle"
                                     key={index}
@@ -324,7 +301,6 @@ class Game extends React.Component {
                                         width
                                     }}
                                 >
-                                    {/* <i className={"fa fa-" + childButtonIcons[index] + " fa-lg"}></i> */}
                                     <Card
                                         onClick={() => this.onCardClick(this.state.cardsInPlay[index].card_id)}
                                         key={this.state.cardsInPlay[index].card_id}
@@ -356,7 +332,6 @@ class Game extends React.Component {
                             className="main-button center"
                             style={{ ...this.mainButtonStyles(), transform: `rotate(${rotate}deg)` }}
                             onClick={this.toggleMenu}>
-                            {/*Using fa-close instead of fa-plus because fa-plus doesn't center properly*/}
                             <i className="fa fa-close fa-3x" />
                         </div>
                     }
